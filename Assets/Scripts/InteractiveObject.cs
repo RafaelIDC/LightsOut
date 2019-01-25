@@ -15,9 +15,13 @@ public class InteractiveObject : MonoBehaviour {
 	}
 
 
-    public void TurnLightsDown()
-    {
+   
 
+
+    public void OnMainEvent()
+    {
+        Debug.Log("Interact with object! " + gameObject.name);
+        MainEvent.Invoke();
     }
 
 

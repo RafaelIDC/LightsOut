@@ -62,5 +62,6 @@ public class GameManager : MonoBehaviour {
         {
             mlight.enabled = false;
         }
+        RenderSettings.ambientLight = Color.black;
     }
 }

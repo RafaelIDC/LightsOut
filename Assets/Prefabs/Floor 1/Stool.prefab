@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4785490012098698}
   - component: {fileID: 65555557045174138}
-  - component: {fileID: 114014592053287398}
+  - component: {fileID: 54142417888641722}
+  - component: {fileID: 114323583370794824}
   m_Layer: 0
   m_Name: Stool
   m_TagString: Untagged
@@ -125,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014406934578636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.91, y: 0.879, z: 3.57}
+  m_LocalPosition: {x: -6.95, y: 0.879, z: 3.07}
   m_LocalScale: {x: 3.5496905, y: 3.5496905, z: 3.5496905}
   m_Children:
   - {fileID: 4720531211021102}
@@ -260,6 +261,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277539425941926}
   m_Mesh: {fileID: 4300004, guid: 2a59c69e522c8ef4cb523720beed6d71, type: 3}
+--- !u!54 &54142417888641722
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014406934578636}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65555557045174138
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -272,7 +288,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16538222, y: 0.2542309, z: 0.18559228}
   m_Center: {x: 0.048668027, y: -0.122158885, z: 0.018953478}
---- !u!114 &114014592053287398
+--- !u!114 &114323583370794824
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,7 +296,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1014406934578636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcdb7c7b7bd0b45e0a7805e5071782b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 60a666abb228d544aaffbea74b56ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floor: {fileID: 0}
+  damage: 5
