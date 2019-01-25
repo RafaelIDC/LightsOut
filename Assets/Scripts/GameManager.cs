@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator lightningCo;
 
+    public int lightningMin = 5;
+    public int lightningMax = 15;
+
 
 
 
@@ -128,7 +131,7 @@ public class GameManager : MonoBehaviour {
     {
         if (lightsOn) yield break;
 
-        randomTime = Random.Range(5, 10);
+        randomTime = Random.Range((float)lightningMin, (float)lightningMax);
         yield return new WaitForSeconds(randomTime);
 
         if (lightsOn) yield break;
