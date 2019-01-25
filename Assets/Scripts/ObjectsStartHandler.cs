@@ -5,7 +5,11 @@ using UnityEngine;
 public class ObjectsStartHandler : MonoBehaviour {
 
 
+
+
     public GameObject[] objectsToShow;
+
+
 
      
 	void Start () {
@@ -16,4 +20,7 @@ public class ObjectsStartHandler : MonoBehaviour {
     }
 	
 	
+
+
+
 }

@@ -81,7 +81,7 @@ public class DealDamage : MonoBehaviour {
         {
             ToFadeMat(rend.material);
         }
-        fadeColor = Color.red;
+        fadeColor = Color.white;
         fadeVal = 1;
         while (fadeVal > 0)
         {
