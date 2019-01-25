@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
 
     public bool lightsOn = true;
 
-    //public Material fadeMat;
+    IEnumerator lightningCo;
 
 
 
@@ -38,13 +38,7 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
-        //foreach (Transform obj in obstaclesParent)
-        //{
-        //    if(obj.GetComponent<DealDamage>())
-        //    {
-        //        obstacles.Add(obj.GetComponent<DealDamage>());
-        //    }
-        //}
+       
     }
 
 
@@ -100,24 +94,74 @@ public class GameManager : MonoBehaviour {
     }
 
 
-    public void TurnLightsDown()
+    public void TurnLightsDown(bool isLightning = true)
     {
-        foreach(Light mlight in lights)
-        {
-            mlight.enabled = false;
-        }
-        RenderSettings.ambientLight = Color.black;
-
-        foreach(DealDamage obs in obstacles)
-        {
-            obs.HideObj();
-        }
+        LightsOff();
 
         lightsOn = false;
+
+        if (isLightning)
+        {
+            if (lightningCo != null)
+            {
+                StopCoroutine(lightningCo);
+            }
+            lightningCo = WaitForLightning();
+            StartCoroutine(lightningCo);
+        }
+
     }
 
 
+
     public void TurnLightsOn()
+    {
+        LightsOn();
+
+        lightsOn = true;
+    }
+
+
+    float randomTime;
+
+    IEnumerator WaitForLightning()
+    {
+        if (lightsOn) yield break;
+
+        randomTime = Random.Range(5, 10);
+        yield return new WaitForSeconds(randomTime);
+
+        if (lightsOn) yield break;
+
+
+        LightsOn();
+
+
+        randomTime = Random.Range(0.05f, 0.5f);
+        yield return new WaitForSeconds(randomTime);
+
+        LightsOff();
+
+
+        randomTime = Random.Range(0.05f, 0.5f);
+        yield return new WaitForSeconds(randomTime);
+
+        LightsOn();
+
+
+        randomTime = Random.Range(0.05f, 0.5f);
+        yield return new WaitForSeconds(randomTime);
+
+        LightsOff();
+
+
+        lightningCo = WaitForLightning();
+        StartCoroutine(lightningCo);
+    }
+
+
+
+    void LightsOn()
     {
         foreach (Light mlight in lights)
         {
@@ -129,7 +173,20 @@ public class GameManager : MonoBehaviour {
         {
             obs.ShowObj();
         }
+    }
 
-        lightsOn = true;
+
+    void LightsOff()
+    {
+        foreach (Light mlight in lights)
+        {
+            mlight.enabled = false;
+        }
+        RenderSettings.ambientLight = Color.black;
+
+        foreach (DealDamage obs in obstacles)
+        {
+            obs.HideObj();
+        }
     }
 }
