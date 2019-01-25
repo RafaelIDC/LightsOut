@@ -9,6 +9,16 @@ public class GameManager : MonoBehaviour {
 
     public Light[] lights;
 
+    public Color globalLightColor;
+
+    public Transform obstaclesParent;
+
+    public List<DealDamage> obstacles = new List<DealDamage>();
+
+    public RaycastHandler raycastHandler;
+
+    bool lightsOn = true;
+
 
 
 
@@ -18,16 +28,47 @@ public class GameManager : MonoBehaviour {
 
         lights = FindObjectsOfType<Light>();
 
-        
     }
 
 
 
-	
-	void Start () {
-        	
-	}
-	
+
+    void Start()
+    {
+        foreach (Transform obj in obstaclesParent)
+        {
+            if(obj.GetComponent<DealDamage>())
+            {
+                obstacles.Add(obj.GetComponent<DealDamage>());
+            }
+        }
+    }
+
+
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            raycastHandler.Interact();
+        }
+
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            lightsOn = !lightsOn;
+            if (lightsOn)
+            {
+                TurnLightsOn();
+            }
+            else
+            {
+                TurnLightsDown();
+            }
+
+        }
+    }
+
+
 
 
     public void TakeDamage(int amount)
@@ -63,5 +104,25 @@ public class GameManager : MonoBehaviour {
             mlight.enabled = false;
         }
         RenderSettings.ambientLight = Color.black;
+
+        foreach(DealDamage obs in obstacles)
+        {
+            obs.HideObj();
+        }
+    }
+
+
+    public void TurnLightsOn()
+    {
+        foreach (Light mlight in lights)
+        {
+            mlight.enabled = true;
+        }
+        RenderSettings.ambientLight = globalLightColor;
+
+        foreach (DealDamage obs in obstacles)
+        {
+            obs.ShowObj();
+        }
     }
 }
