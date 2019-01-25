@@ -1,15 +1,27 @@
 fileFormatVersion: 2
-guid: d621f783ce6cd4db381961381faf6de6
+guid: 2a59c69e522c8ef4cb523720beed6d71
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: No Name
-    2100002: 'Material #2'
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Line001
+    100000: ' 1'
+    100002: Box002
+    100004: Gengon002
+    100006: //RootNode
+    400000: ' 1'
+    400002: Box002
+    400004: Gengon002
+    400006: //RootNode
+    2100000: Stooltopbot
+    2100002: StoolTop
+    2100004: StoolLeg
+    2300000: ' 1'
+    2300002: Box002
+    2300004: Gengon002
+    3300000: ' 1'
+    3300002: Box002
+    3300004: Gengon002
+    4300002: Gengon002
+    4300004: Box002
   externalObjects: {}
   materials:
     importMaterials: 1
