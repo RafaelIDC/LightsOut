@@ -1,14 +1,25 @@
 fileFormatVersion: 2
-guid: ae04b7f952fd53f46bb0e07889e36f65
+guid: 0be1f63a6be544f4db105683d2b6ec23
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: 'Material #2'
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Box001
+    100000: Loft01
+    100002: Loft03
+    100004: //RootNode
+    100006: Sphere01
+    400000: Loft01
+    400002: Loft03
+    400004: //RootNode
+    400006: Sphere01
+    2100000: 01 - Default
+    2100002: tap
+    2100004: No Name
+    2300000: Loft01
+    2300002: Sphere01
+    3300000: Loft01
+    3300002: Sphere01
+    4300000: Sphere01
+    4300002: Loft01
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +51,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
