@@ -1512,7 +1512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1540679004
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2140,7 +2140,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2046644411}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2390,3 +2390,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4365391327828814, guid: c571e975b3d244c8488bb8182bae3c20,
     type: 2}
   m_PrefabInternal: {fileID: 2141966393}
+--- !u!1 &2141966395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1760318756448818, guid: c571e975b3d244c8488bb8182bae3c20,
+    type: 2}
+  m_PrefabInternal: {fileID: 2141966393}
+--- !u!114 &2141966396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141966395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd0c256212d949d390b9f94a45b291e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

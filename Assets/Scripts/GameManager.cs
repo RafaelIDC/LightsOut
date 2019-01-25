@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public int health;
+    public int health = 100;
     static public GameManager instance;
+
+    public Light[] lights;
+
+
+
 
     void Awake()
     {
         instance = this;
+
+        lights = FindObjectsOfType<Light>();
+
+        
     }
 
-	// Use this for initialization
+
+
+	
 	void Start () {
         	
 	}
 	
+
+
     public void TakeDamage(int amount)
     {
         this.health -= amount;
@@ -29,13 +42,25 @@ public class GameManager : MonoBehaviour {
     }
 
 
-	// Update is called once per frame
-	void Update () {
-        
-	}
 
-    void LoseGame()
+
+    public void LoseGame()
     {
         //???
+    }
+
+
+    public void StartGame()
+    {
+
+    }
+
+
+    public void TurnLightsDown()
+    {
+        foreach(Light mlight in lights)
+        {
+            mlight.enabled = false;
+        }
     }
 }
