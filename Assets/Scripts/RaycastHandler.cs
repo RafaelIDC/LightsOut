@@ -27,7 +27,7 @@ public class RaycastHandler : MonoBehaviour {
 
 
 
-    void Interact()
+     public void Interact()
     {
         RaycastHit hit;
         //Ray ray = camera.ScreenPointToRay(transform.position);

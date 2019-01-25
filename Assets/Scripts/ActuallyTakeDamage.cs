@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ActuallyTakeDamage : MonoBehaviour {
 
+
+    DealDamage currentDealDamage;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,12 +18,18 @@ public class ActuallyTakeDamage : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        Debug.Log("Player hit " + collision.gameObject.tag);
 
         if (collision.gameObject.tag == "Obstacle")
         {
-            Debug.Log("Player takes Damage: " + collision.gameObject.GetComponent<DealDamage>().damage);
-            GameManager.instance.TakeDamage(collision.gameObject.GetComponent<DealDamage>().damage);
+            currentDealDamage = collision.gameObject.GetComponent<DealDamage>();
+            if (currentDealDamage)
+            {
+                Debug.Log("Player takes Damage: " + currentDealDamage.damage);
+                GameManager.instance.TakeDamage(currentDealDamage.damage);
+                currentDealDamage.FadeRed();
+            }
+
         }
     }
 }

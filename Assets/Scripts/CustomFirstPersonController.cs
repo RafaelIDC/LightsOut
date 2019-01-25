@@ -8,7 +8,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (CharacterController))]
     [RequireComponent(typeof (AudioSource))]
-    public class FirstPersonController : MonoBehaviour
+    public class CustomFirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
@@ -241,10 +241,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
 
+        DealDamage currentDealDamage;
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            //Debug.Log("Player hit " + hit.gameObject.tag);
+            if (hit.gameObject.tag == "Obstacle")
+            {
+                currentDealDamage = hit.gameObject.GetComponent<DealDamage>();
+                if (currentDealDamage)
+                {
+                    Debug.Log("Player takes Damage: " + currentDealDamage.damage);
+                    GameManager.instance.TakeDamage(currentDealDamage.damage);
+                    currentDealDamage.FadeRed();
+                }
+
+            }
 
             Rigidbody body = hit.collider.attachedRigidbody;
             //dont move the rigidbody if the character is on top of it
@@ -260,7 +271,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
 
-           
+
+
+
         }
     }
 }
