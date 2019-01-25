@@ -35,7 +35,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.035
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 27869002}
   m_Layer: 0
   m_Name: PC (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -480,9 +480,10 @@ GameObject:
   - component: {fileID: 32457072}
   - component: {fileID: 32457071}
   - component: {fileID: 32457075}
+  - component: {fileID: 32457076}
   m_Layer: 0
   m_Name: Bed
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,8 +498,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0161028, y: 1, z: 1.0682969}
+  m_Center: {x: 0.008051445, y: 0, z: -0.011370536}
 --- !u!23 &32457072
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -558,7 +559,6 @@ Transform:
   - {fileID: 704232686}
   - {fileID: 1080386265}
   - {fileID: 492042335}
-  - {fileID: 204498708}
   m_Father: {fileID: 1728739878}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -575,6 +575,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+--- !u!54 &32457076
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32457070}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &35952290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +1080,7 @@ GameObject:
   - component: {fileID: 130142079}
   m_Layer: 0
   m_Name: Cabinet (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2036,108 +2051,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a69ebd5ce351749a133ecc7d77e799, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &204498704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 204498708}
-  - component: {fileID: 204498707}
-  - component: {fileID: 204498706}
-  - component: {fileID: 204498705}
-  - component: {fileID: 204498709}
-  m_Layer: 0
-  m_Name: Capsule (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &204498705
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204498704}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &204498706
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204498704}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2100000, guid: 661e7396f3b28d54cb9c56fa7c086829, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &204498707
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204498704}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &204498708
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204498704}
-  m_LocalRotation: {x: 0.5266921, y: 0.5192754, z: 0.43477458, w: 0.51373106}
-  m_LocalPosition: {x: -0.34168005, y: 1.8286995, z: 0.023971964}
-  m_LocalScale: {x: 1.363096, y: 0.17190269, z: 0.12713037}
-  m_Children: []
-  m_Father: {fileID: 32457074}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 5.142, y: 95.422005, z: 86.135}
---- !u!54 &204498709
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204498704}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &224407509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,6 +2807,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.3036
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2343569ff32154005a95932bba90de30, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2343569ff32154005a95932bba90de30, type: 3}
   m_IsPrefabAsset: 0
@@ -3029,6 +2946,10 @@ Prefab:
     - target: {fileID: 400006, guid: b2b559d5dd41f1b42861417566319ac2, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4049
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2b559d5dd41f1b42861417566319ac2, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b559d5dd41f1b42861417566319ac2, type: 3}
@@ -3608,7 +3529,7 @@ GameObject:
   - component: {fileID: 539569020}
   m_Layer: 0
   m_Name: Closet
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3904,7 +3825,7 @@ BoxCollider:
   m_GameObject: {fileID: 574840106}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4036,6 +3957,10 @@ Prefab:
     - target: {fileID: 4571950884515200, guid: 5eda9f726466e774bb6b4d12f5ddf37b, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257167077991118, guid: 5eda9f726466e774bb6b4d12f5ddf37b, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eda9f726466e774bb6b4d12f5ddf37b, type: 2}
@@ -4896,7 +4821,7 @@ GameObject:
   - component: {fileID: 780914344}
   m_Layer: 0
   m_Name: Closet (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5372,6 +5297,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.9941009
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 40fc9dc2db5e1c74c98852bfb4f6a0d4, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40fc9dc2db5e1c74c98852bfb4f6a0d4, type: 3}
   m_IsPrefabAsset: 0
@@ -5567,6 +5496,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1888756933161506, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2, type: 2}
   m_IsPrefabAsset: 0
@@ -5585,7 +5518,7 @@ GameObject:
   - component: {fileID: 901094907}
   m_Layer: 0
   m_Name: PC (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5788,7 +5721,7 @@ GameObject:
   - component: {fileID: 918386347}
   m_Layer: 0
   m_Name: Table
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6276,6 +6209,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ac69879d645043479c50c3406ae88ef, type: 2}
+    - target: {fileID: 100000, guid: 116c55b3f7b7f7941bd9146f95d2ac02, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 116c55b3f7b7f7941bd9146f95d2ac02, type: 3}
   m_IsPrefabAsset: 0
@@ -6926,7 +6863,7 @@ GameObject:
   - component: {fileID: 1060429612}
   m_Layer: 0
   m_Name: Cabinet (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8180,6 +8117,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: cddba2e5d53751045886f07aaf6cd65f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cddba2e5d53751045886f07aaf6cd65f, type: 3}
   m_IsPrefabAsset: 0
@@ -8247,6 +8188,10 @@ Prefab:
     - target: {fileID: 400000, guid: 40fc9dc2db5e1c74c98852bfb4f6a0d4, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.513799
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 40fc9dc2db5e1c74c98852bfb4f6a0d4, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40fc9dc2db5e1c74c98852bfb4f6a0d4, type: 3}
@@ -8855,7 +8800,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.55
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -9312,7 +9257,7 @@ GameObject:
   - component: {fileID: 1386346611}
   m_Layer: 0
   m_Name: Shelf
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10005,6 +9950,18 @@ Prefab:
       propertyPath: m_Height
       value: 1.8
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabAsset: 0
@@ -10333,6 +10290,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9114efa814b5d3b43a036334c4e09086, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9114efa814b5d3b43a036334c4e09086, type: 3}
   m_IsPrefabAsset: 0
@@ -10349,7 +10310,7 @@ GameObject:
   - component: {fileID: 1565182097}
   m_Layer: 0
   m_Name: KeyBoard
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10585,6 +10546,10 @@ Prefab:
     - target: {fileID: 4129237075956760, guid: d2fad9e421532ae40ac79ecc3fe0a586, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.3008792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062206808933956, guid: d2fad9e421532ae40ac79ecc3fe0a586, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2fad9e421532ae40ac79ecc3fe0a586, type: 2}
@@ -11640,6 +11605,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -0.78
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 68a6ec50bdbed4041badc81adc022230, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a6ec50bdbed4041badc81adc022230, type: 3}
   m_IsPrefabAsset: 0
@@ -11973,6 +11942,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ad09a564279bf5c4fb499e7448c90982, type: 2}
+    - target: {fileID: 100000, guid: 96c602ebd39eb4f459bc1f301bfe1e49, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c602ebd39eb4f459bc1f301bfe1e49, type: 3}
   m_IsPrefabAsset: 0
@@ -12812,7 +12785,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2.07
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -12866,7 +12839,7 @@ GameObject:
   - component: {fileID: 2060884291}
   m_Layer: 0
   m_Name: Pillar
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13113,7 +13086,7 @@ GameObject:
   - component: {fileID: 2104318102}
   m_Layer: 0
   m_Name: PC
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
