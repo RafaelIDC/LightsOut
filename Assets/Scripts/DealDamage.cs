@@ -30,6 +30,7 @@ public class DealDamage : MonoBehaviour {
 
         foreach (Renderer rend in renderers)
         {
+            rend.sharedMaterial.shader = Shader.Find("Standard");
             ToRegularMat(rend.material);
         }
 
@@ -81,16 +82,18 @@ public class DealDamage : MonoBehaviour {
         {
             ToFadeMat(rend.material);
         }
-        fadeColor = Color.white;
+
         fadeVal = 1;
         while (fadeVal > 0)
         {
+            fadeVal -= fadeSpeed;
             foreach (Renderer rend in renderers)
             {
+                fadeColor = rend.material.color;
+                fadeColor.a = fadeVal;
                 rend.material.color = fadeColor;
             }
-            fadeVal -= fadeSpeed;
-            fadeColor.a = fadeVal;
+
             yield return waitFixedUpdate;
         }
 
@@ -98,6 +101,9 @@ public class DealDamage : MonoBehaviour {
         foreach (Renderer rend in renderers)
         {
             ToRegularMat(rend.material);
+            //fadeColor = rend.material.color;
+            fadeColor.a = 1f;
+            rend.material.color = fadeColor;
         }
         isFading = false;
     }
