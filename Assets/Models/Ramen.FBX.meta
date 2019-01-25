@@ -1,23 +1,27 @@
 fileFormatVersion: 2
-guid: 044fa161653be0b4c8e497efcfeba608
+guid: d93638b5a8e973f458b27040888be3ba
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box001
-    100002: //RootNode
-    100004: Plane001
-    400000: Box001
-    400002: //RootNode
-    400004: Plane001
-    2100000: Picture
-    2100002: 'Material #48'
-    2300000: Box001
-    2300002: Plane001
-    3300000: Box001
-    3300002: Plane001
-    4300000: Box001
-    4300002: Plane001
-  externalObjects: {}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: 'Material #57'
+    2100002: 'Material #59'
+    2100004: Micro
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cylinder004
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Micro
+    second: {fileID: 2100000, guid: 418eb4acd92373e43ba74efac43ba1b9, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fideos Frutafiel
+    second: {fileID: 2800000, guid: 358807e1aa4257d43814af1d2835c63d, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
