@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  m_AmbientSkyColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -636,6 +636,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 388424752}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &441222233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114386930841460636, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1197409311}
+  m_Script: {fileID: 11500000, guid: 89bd11ca1a95c4efd9e6c167fd1bd621, type: 3}
 --- !u!1 &488540957
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,8 +764,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 502708504}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -932,7 +938,8 @@ MonoBehaviour:
   globalLightColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
   obstaclesParent: {fileID: 864311224}
   obstacles: []
-  raycastHandler: {fileID: 0}
+  raycastHandler: {fileID: 441222233}
+  lightsOn: 1
 --- !u!4 &781931474
 Transform:
   m_ObjectHideFlags: 0
@@ -1056,7 +1063,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 830224566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 1.75, z: 15.29}
+  m_LocalPosition: {x: 0.02, y: 1.75, z: 15.24}
   m_LocalScale: {x: 30.000025, y: 3.5, z: 0.5391402}
   m_Children: []
   m_Father: {fileID: 1807158846}
@@ -1833,6 +1840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1790048730}
+  - component: {fileID: 1790048731}
   m_Layer: 0
   m_Name: room holder
   m_TagString: Untagged
@@ -1856,6 +1864,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1790048731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1790048729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd930d5f52a94046b5aad4674315829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToShow:
+  - {fileID: 502708504}
 --- !u!1 &1807158845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,7 +1985,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1854901016}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -15.28, y: 1.75, z: -0.07}
+  m_LocalPosition: {x: -15.2, y: 1.75, z: -0.07}
   m_LocalScale: {x: 30, y: 3.5, z: 0.53914}
   m_Children: []
   m_Father: {fileID: 1807158846}

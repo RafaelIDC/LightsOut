@@ -10,20 +10,33 @@ public class DealDamage : MonoBehaviour {
 
     WaitForFixedUpdate waitFixedUpdate = new WaitForFixedUpdate();
 
-    float fadeSpeed = 0.001f;
+    float fadeSpeed = 0.01f;
     float fadeVal;
 
     Color fadeColor;
 
+    bool isFading;
+
+    //Shader fadeShader;
+   //Shader standardShader;
+
+    //Material fadeMat;
+    //Material defoultMat;
 
 
-	void Start () {
+
+    void Start () {
         renderers = GetComponentsInChildren<Renderer>();
 
-        foreach(Renderer rend in renderers)
+        foreach (Renderer rend in renderers)
         {
-            rend.material.SetFloat("_Mode", 3f);
+            ToRegularMat(rend.material);
         }
+
+        //fadeShader = Shader.Find("Legacy Shaders/Transparent/VertexLit");
+        //standardShader = renderers[0].material.shader;
+
+
     }
 
 
@@ -50,16 +63,23 @@ public class DealDamage : MonoBehaviour {
 
     public void FadeRed()
     {
+        if (GameManager.instance.lightsOn) return;
+
+        if (isFading) return;
+
+        isFading = true;
         StartCoroutine(FadeRedCo());
+
     }
 
 
     IEnumerator FadeRedCo()
     {
+
         ShowObj();
         foreach (Renderer rend in renderers)
         {
-            rend.material.color = Color.red;
+            ToFadeMat(rend.material);
         }
         fadeColor = Color.red;
         fadeVal = 1;
@@ -77,7 +97,35 @@ public class DealDamage : MonoBehaviour {
         HideObj();
         foreach (Renderer rend in renderers)
         {
-            rend.material.color = Color.white;
+            ToRegularMat(rend.material);
         }
+        isFading = false;
     }
+
+
+    void ToFadeMat(Material mat)
+    {
+        mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+        mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+        mat.SetInt("_ZWrite", 0);
+        mat.DisableKeyword("_ALPHATEST_ON");
+        mat.EnableKeyword("_ALPHABLEND_ON");
+        mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+        mat.renderQueue = 3000;
+        mat.EnableKeyword("_EMISSION");
+        mat.SetColor("_EmissionColor", Color.red);
+    }
+
+    void ToRegularMat(Material mat)
+    {
+        mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+        mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
+        mat.SetInt("_ZWrite", 1);
+        mat.DisableKeyword("_ALPHATEST_ON");
+        mat.DisableKeyword("_ALPHABLEND_ON");
+        mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+        mat.renderQueue = -1;
+        mat.DisableKeyword("_EMISSION");
+    }
+
 }

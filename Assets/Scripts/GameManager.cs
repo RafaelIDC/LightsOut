@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour {
 
     public RaycastHandler raycastHandler;
 
-    bool lightsOn = true;
+    public bool lightsOn = true;
+
+    //public Material fadeMat;
 
 
 
@@ -109,6 +111,8 @@ public class GameManager : MonoBehaviour {
         {
             obs.HideObj();
         }
+
+        lightsOn = false;
     }
 
 
@@ -124,5 +128,7 @@ public class GameManager : MonoBehaviour {
         {
             obs.ShowObj();
         }
+
+        lightsOn = true;
     }
 }
