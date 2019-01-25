@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 116c55b3f7b7f7941bd9146f95d2ac02
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MouseBody
+    100004: MouseLeftEar
+    100006: MouseLeftEye
+    100008: MouseLeg001
+    100010: MouseLeg002
+    100012: MouseLeg003
+    100014: MouseLeg004
+    100016: MouseNose
+    100018: MouseRightEar
+    100020: MouseRightEye
+    100022: MouseTail
+    400000: //RootNode
+    400002: MouseBody
+    400004: MouseLeftEar
+    400006: MouseLeftEye
+    400008: MouseLeg001
+    400010: MouseLeg002
+    400012: MouseLeg003
+    400014: MouseLeg004
+    400016: MouseNose
+    400018: MouseRightEar
+    400020: MouseRightEye
+    400022: MouseTail
+    2100000: MouseGrey
+    2100002: MousePink
+    2100004: MouseBlack
+    2300000: MouseBody
+    2300002: MouseLeftEar
+    2300004: MouseLeftEye
+    2300006: MouseLeg001
+    2300008: MouseLeg002
+    2300010: MouseLeg003
+    2300012: MouseLeg004
+    2300014: MouseNose
+    2300016: MouseRightEar
+    2300018: MouseRightEye
+    2300020: MouseTail
+    3300000: MouseBody
+    3300002: MouseLeftEar
+    3300004: MouseLeftEye
+    3300006: MouseLeg001
+    3300008: MouseLeg002
+    3300010: MouseLeg003
+    3300012: MouseLeg004
+    3300014: MouseNose
+    3300016: MouseRightEar
+    3300018: MouseRightEye
+    3300020: MouseTail
+    4300000: MouseBody
+    4300002: MouseLeftEar
+    4300004: MouseRightEar
+    4300006: MouseLeg001
+    4300008: MouseLeg002
+    4300010: MouseLeg003
+    4300012: MouseLeg004
+    4300014: MouseLeftEye
+    4300016: MouseRightEye
+    4300018: MouseNose
+    4300020: MouseTail
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
