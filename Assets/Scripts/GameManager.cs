@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour {
 
     public Transform obstaclesParent;
 
-    public List<DealDamage> obstacles = new List<DealDamage>();
+    public DealDamage[] obstacles;
+    //public List<DealDamage> obstacles = new List<DealDamage>();
 
     public RaycastHandler raycastHandler;
 
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour {
         instance = this;
 
         lights = FindObjectsOfType<Light>();
-
+        obstacles = FindObjectsOfType<DealDamage>();
     }
 
 
@@ -37,13 +38,13 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
-        foreach (Transform obj in obstaclesParent)
-        {
-            if(obj.GetComponent<DealDamage>())
-            {
-                obstacles.Add(obj.GetComponent<DealDamage>());
-            }
-        }
+        //foreach (Transform obj in obstaclesParent)
+        //{
+        //    if(obj.GetComponent<DealDamage>())
+        //    {
+        //        obstacles.Add(obj.GetComponent<DealDamage>());
+        //    }
+        //}
     }
 
 
