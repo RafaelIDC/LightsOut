@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour {
     public AudioSource tvSound;
     public AudioSource teddySound;
     public AudioSource powerdownSound;
+    public AudioSource lightMusic;
+    public AudioSource darkMusic;
 
 
 
@@ -86,6 +88,8 @@ public class GameManager : MonoBehaviour {
         }
 
         floor2.SetActive(false);
+
+        lightMusic.Play();
     }
 
 
@@ -196,11 +200,9 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(lightningCo);
 
         powerdownSound.Play();
-        //if (isLightning)
-        //{
 
-        //}
-
+        lightMusic.Stop();
+        darkMusic.Play();
     }
 
 
@@ -214,6 +216,9 @@ public class GameManager : MonoBehaviour {
         lightsOn = true;
 
         lightSwitchSound.Play();
+
+        lightMusic.Play();
+        darkMusic.Stop();
     }
 
 
