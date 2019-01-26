@@ -8,12 +8,10 @@ public class InteractiveObject : MonoBehaviour {
 
 
     public UnityEvent MainEvent;
-
-
-	void Start () {
-		
-	}
-
+    public string[] nextMessege;
+    public int textDelay;
+    int msgIndex = 0;
+	
 
    
 
@@ -22,6 +20,13 @@ public class InteractiveObject : MonoBehaviour {
     {
         Debug.Log("Interact with object! " + gameObject.name);
         MainEvent.Invoke();
+
+        if (UIManager.instance && nextMessege.Length > msgIndex && !String.IsNullOrEmpty(nextMessege[msgIndex]))
+        {
+            UIManager.instance.ShowNextMessege(nextMessege[msgIndex], textDelay);
+        }
+
+        msgIndex++;
     }
 
 
