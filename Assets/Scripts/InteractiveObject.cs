@@ -44,11 +44,11 @@ public class InteractiveObject : MonoBehaviour {
                 nextMsgDelay = 0;
                 currentMsg = nextMessege[msgIndex];
             }
-            UIManager.instance.ShowNextMessege(currentMsg);
-            //if (!String.IsNullOrEmpty(currentMsg))
-            //{
-            //    UIManager.instance.ShowNextMessege(currentMsg);
-            //}
+            //UIManager.instance.ShowNextMessege(currentMsg);
+            if (!String.IsNullOrEmpty(currentMsg))
+            {
+                UIManager.instance.ShowNextMessege(currentMsg);
+            }
 
         }
 

@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour {
     public AudioSource damageSound;
     public AudioSource lightningSound;
     public AudioSource lightSwitchSound;
+    public AudioSource microWaveSound;
+    public AudioSource tvSound;
+    public AudioSource teddySound;
 
 
 
