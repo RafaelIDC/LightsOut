@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour {
 
     public AudioSource damageSound;
     public AudioSource lightningSound;
+    public AudioSource lightSwitchSound;
 
 
 
@@ -199,6 +200,8 @@ public class GameManager : MonoBehaviour {
         LightsOn();
 
         lightsOn = true;
+
+        lightSwitchSound.Play();
     }
 
 
@@ -213,6 +216,7 @@ public class GameManager : MonoBehaviour {
 
         if (lightsOn) yield break;
 
+        lightningSound.Play();
 
         foreach (DealDamage obs in obstacles)
         {
