@@ -342,6 +342,7 @@ public class GameManager : MonoBehaviour {
     public void OnFinishGame()
     {
         Debug.Log("Game Finished!");
+        SceneManager.LoadScene(0);
     }
 
 }
