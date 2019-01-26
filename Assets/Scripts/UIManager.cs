@@ -46,7 +46,8 @@ public class UIManager : MonoBehaviour {
 
         yield return waitForMessege;
 
-        ShowMessege(msg);
+        if(!String.IsNullOrEmpty(msg))
+            ShowMessege(msg);
     }
 
 
