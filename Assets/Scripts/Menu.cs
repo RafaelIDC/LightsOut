@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
     public GameObject StartButton;
     public GameObject CreditsButton;
     public GameObject BackButton;
+    public GameObject Logo;
 
 
     public void StartGame()
@@ -20,6 +21,7 @@ public class Menu : MonoBehaviour
 
     public void Credits()
     {
+        Logo.SetActive(false);
         StartButton.SetActive(false);
         CreditsButton.SetActive(false);
         CreditsText.gameObject.SetActive(true);
@@ -30,6 +32,7 @@ public class Menu : MonoBehaviour
     {
         BackButton.SetActive(false);
         CreditsText.gameObject.SetActive(false);
+        Logo.SetActive(true);
         StartButton.SetActive(true);
         CreditsButton.SetActive(true);
     }
