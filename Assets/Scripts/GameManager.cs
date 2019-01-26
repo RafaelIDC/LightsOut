@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour {
     Color globalLightColor;
     public Color lightningColor;
 
-    public Transform obstaclesParent;
+    //public Transform floor1ObstaclesParent;
+    //public Transform floor2ObstaclesParent;
+    //public Transform floor3ObstaclesParent;
 
     public DealDamage[] obstacles;
     //public List<DealDamage> obstacles = new List<DealDamage>();
@@ -98,8 +100,11 @@ public class GameManager : MonoBehaviour {
             {
                 Invoke("WaitAfterDamage", 1);
             }
-            //Debug.Log(health);
-            healthTxt.text = health.ToString();
+            if (healthTxt)
+            {
+                healthTxt.text = health.ToString();
+            }
+
         }
         else
         {
