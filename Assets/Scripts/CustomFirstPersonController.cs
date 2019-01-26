@@ -201,9 +201,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
+        public bool isLocked;
+
         private void GetInput(out float speed)
         {
             // Read input
+            if (isLocked)
+            {
+                speed = 0;
+                return;
+            }
+
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 

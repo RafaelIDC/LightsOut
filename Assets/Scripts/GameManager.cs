@@ -48,9 +48,10 @@ public class GameManager : MonoBehaviour {
     {
         instance = this;
 
-        lights = FindObjectsOfType<Light>();
+        floor1.SetActive(true);
+        floor2.SetActive(true);
 
-        
+        lights = FindObjectsOfType<Light>();
 
         obstacles = FindObjectsOfType<DealDamage>();
 
@@ -216,7 +217,7 @@ public class GameManager : MonoBehaviour {
         {
             mlight.enabled = true;
         }
-        RenderSettings.ambientLight = globalLightColor;
+        RenderSettings.ambientLight = lightningColor;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
@@ -246,7 +247,7 @@ public class GameManager : MonoBehaviour {
         {
             mlight.enabled = true;
         }
-        RenderSettings.ambientLight = globalLightColor;
+        RenderSettings.ambientLight = lightningColor;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
