@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour {
     static public GameManager instance;
 
     Light[] lights;
-    public Light[] lightninglights;
+    //public Light[] lightninglights;
+    List<Light> lightningLights = new List<Light>();
+    List<Light> homeLights = new List<Light>();
 
     Color globalLightColor;
     public Color lightningColor;
@@ -36,6 +38,9 @@ public class GameManager : MonoBehaviour {
 
     public Transform playerTransform;
 
+    public GameObject floor1;
+    public GameObject floor2;
+
 
 
 
@@ -44,6 +49,9 @@ public class GameManager : MonoBehaviour {
         instance = this;
 
         lights = FindObjectsOfType<Light>();
+
+        
+
         obstacles = FindObjectsOfType<DealDamage>();
 
         globalLightColor = RenderSettings.ambientLight;
@@ -54,7 +62,19 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
-       
+       foreach(Light mlight in lights)
+        {
+            if(mlight.type == LightType.Directional)
+            {
+                lightningLights.Add(mlight);
+            }
+            else
+            {
+                homeLights.Add(mlight);
+            }
+        }
+
+        floor2.SetActive(false);
     }
 
 
@@ -192,7 +212,7 @@ public class GameManager : MonoBehaviour {
         {
             obs.ShowObj();
         }
-        foreach (Light mlight in lightninglights)
+        foreach (Light mlight in lightningLights)
         {
             mlight.enabled = true;
         }
@@ -207,7 +227,7 @@ public class GameManager : MonoBehaviour {
         {
             obs.HideObj();
         }
-        foreach (Light mlight in lightninglights)
+        foreach (Light mlight in lightningLights)
         {
             mlight.enabled = false;
         }
@@ -222,7 +242,7 @@ public class GameManager : MonoBehaviour {
         {
             obs.ShowObj();
         }
-        foreach (Light mlight in lightninglights)
+        foreach (Light mlight in lightningLights)
         {
             mlight.enabled = true;
         }
@@ -237,7 +257,7 @@ public class GameManager : MonoBehaviour {
         {
             obs.HideObj();
         }
-        foreach (Light mlight in lightninglights)
+        foreach (Light mlight in lightningLights)
         {
             mlight.enabled = false;
         }
@@ -252,12 +272,10 @@ public class GameManager : MonoBehaviour {
 
     void LightsOn()
     {
-        foreach (Light mlight in lights)
+        foreach (Light mlight in homeLights)
         {
-            if(mlight.type != LightType.Directional)
-            {
-                mlight.enabled = true;
-            }
+
+            mlight.enabled = true;
 
         }
         RenderSettings.ambientLight = globalLightColor;
@@ -271,7 +289,7 @@ public class GameManager : MonoBehaviour {
 
     void LightsOff()
     {
-        foreach (Light mlight in lights)
+        foreach (Light mlight in homeLights)
         {
             mlight.enabled = false;
         }

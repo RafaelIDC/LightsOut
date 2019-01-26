@@ -18427,7 +18427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &763507151
 Transform:
   m_ObjectHideFlags: 0
@@ -31635,6 +31635,16 @@ Prefab:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 8061095}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: floor1
+      value: 
+      objectReference: {fileID: 550166918}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: floor2
+      value: 
+      objectReference: {fileID: 763507150}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26df5be7d832542349dedb8c03818ee6, type: 2}
   m_IsPrefabAsset: 0
@@ -44152,7 +44162,7 @@ GameObject:
   - component: {fileID: 1826599007}
   - component: {fileID: 1826599008}
   m_Layer: 0
-  m_Name: Scene Holder
+  m_Name: Scene Holder old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
