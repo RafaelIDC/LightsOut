@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour {
 
     public Text healthTxt;
 
+    public Transform playerTransform;
+
 
 
 
@@ -252,7 +254,11 @@ public class GameManager : MonoBehaviour {
     {
         foreach (Light mlight in lights)
         {
-            mlight.enabled = true;
+            if(mlight.type != LightType.Directional)
+            {
+                mlight.enabled = true;
+            }
+
         }
         RenderSettings.ambientLight = globalLightColor;
 
