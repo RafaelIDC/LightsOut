@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UI;
 
 public class DealDamage : MonoBehaviour {
 
@@ -17,7 +18,7 @@ public class DealDamage : MonoBehaviour {
 
     bool isFading;
 
-    //Shader fadeShader;
+
    //Shader standardShader;
 
     //Material fadeMat;
