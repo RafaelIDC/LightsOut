@@ -46,6 +46,10 @@ public class GameManager : MonoBehaviour {
     public AudioSource damageSound;
     public AudioSource lightningSound;
     public AudioSource lightSwitchSound;
+    public AudioSource microWaveSound;
+    public AudioSource tvSound;
+    public AudioSource teddySound;
+    public AudioSource powerdownSound;
 
 
 
@@ -133,7 +137,12 @@ public class GameManager : MonoBehaviour {
             {
                 healthTxt.text = health.ToString();
             }
-            damageSound.Play();
+
+            if(amount > 0)
+            {
+                damageSound.Play();
+            }
+
         }
         else
         {
@@ -186,6 +195,7 @@ public class GameManager : MonoBehaviour {
         lightningCo = WaitForLightning();
         StartCoroutine(lightningCo);
 
+        powerdownSound.Play();
         //if (isLightning)
         //{
 
@@ -197,6 +207,8 @@ public class GameManager : MonoBehaviour {
 
     public void TurnLightsOn()
     {
+        if (lightningsOn) return;
+
         LightsOn();
 
         lightsOn = true;
@@ -205,6 +217,7 @@ public class GameManager : MonoBehaviour {
     }
 
 
+    bool lightningsOn;
     float randomTime;
 
     IEnumerator WaitForLightning()
@@ -217,6 +230,7 @@ public class GameManager : MonoBehaviour {
         if (lightsOn) yield break;
 
         lightningSound.Play();
+        lightningsOn = true;
 
         foreach (DealDamage obs in obstacles)
         {
@@ -273,6 +287,7 @@ public class GameManager : MonoBehaviour {
         }
         RenderSettings.ambientLight = Color.black;
 
+        lightningsOn = false;
 
         lightningCo = WaitForLightning();
         StartCoroutine(lightningCo);
