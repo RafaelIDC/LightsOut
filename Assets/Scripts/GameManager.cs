@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -19,11 +21,14 @@ public class GameManager : MonoBehaviour {
     public RaycastHandler raycastHandler;
 
     public bool lightsOn = true;
+    bool takingDamage;
 
     IEnumerator lightningCo;
 
     public int lightningMin = 5;
     public int lightningMax = 15;
+
+    public Text healthTxt;
 
 
 
@@ -75,13 +80,37 @@ public class GameManager : MonoBehaviour {
 
     public void TakeDamage(int amount)
     {
-        this.health -= amount;
-        Debug.Log(health);
+        if (takingDamage) return;
 
-        if (health <= 0)
+        takingDamage = true;
+
+        if (health > 0)
         {
+            this.health -= amount;
+            if (health <= 0)
+            {
+                health = 0;
+                LoseGame();
+            }
+            else
+            {
+                Invoke("WaitAfterDamage", 1);
+            }
+            Debug.Log(health);
+            healthTxt.text = health.ToString();
+        }
+        else
+        {
+            health = 0;
             LoseGame();
         }
+
+    }
+
+
+    void WaitAfterDamage()
+    {
+        takingDamage = false;
     }
 
 
@@ -89,13 +118,13 @@ public class GameManager : MonoBehaviour {
 
     public void LoseGame()
     {
-        //???
+        Invoke("StartGame", 1);
     }
 
 
     public void StartGame()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 
