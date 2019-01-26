@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour {
             {
                 Invoke("WaitAfterDamage", 1);
             }
-            Debug.Log(health);
+            //Debug.Log(health);
             healthTxt.text = health.ToString();
         }
         else
