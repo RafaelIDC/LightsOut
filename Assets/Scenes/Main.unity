@@ -1649,6 +1649,26 @@ Prefab:
       propertyPath: healthTxt
       value: 
       objectReference: {fileID: 1032118004}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: lightningColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: lightningColor.r
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: lightningColor.g
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: lightningColor.b
+      value: 0.8773585
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26df5be7d832542349dedb8c03818ee6, type: 2}
   m_IsPrefabAsset: 0

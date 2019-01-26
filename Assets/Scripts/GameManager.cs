@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public Light[] lights;
 
     Color globalLightColor;
+    public Color lightningColor;
 
     public Transform obstaclesParent;
 
@@ -168,25 +169,28 @@ public class GameManager : MonoBehaviour {
         if (lightsOn) yield break;
 
 
-        LightsOn();
+        RenderSettings.ambientLight = lightningColor;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
         yield return new WaitForSeconds(randomTime);
 
-        LightsOff();
+        //LightsOff();
+        RenderSettings.ambientLight = Color.black;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
         yield return new WaitForSeconds(randomTime);
 
-        LightsOn();
+        //LightsOn();
+        RenderSettings.ambientLight = lightningColor;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
         yield return new WaitForSeconds(randomTime);
 
-        LightsOff();
+        //LightsOff();
+        RenderSettings.ambientLight = Color.black;
 
 
         lightningCo = WaitForLightning();
