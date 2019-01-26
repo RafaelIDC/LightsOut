@@ -41,6 +41,11 @@ public class GameManager : MonoBehaviour {
     public GameObject floor1;
     public GameObject floor2;
 
+    public bool isFinishGame;
+
+    public AudioSource damageSound;
+    public AudioSource lightningSound;
+
 
 
 
@@ -127,7 +132,7 @@ public class GameManager : MonoBehaviour {
             {
                 healthTxt.text = health.ToString();
             }
-
+            damageSound.Play();
         }
         else
         {
@@ -301,4 +306,18 @@ public class GameManager : MonoBehaviour {
             obs.HideObj();
         }
     }
+
+
+
+    public void PreperToFinishGame()
+    {
+        isFinishGame = true;
+    }
+
+
+    public void OnFinishGame()
+    {
+        Debug.Log("Game Finished!");
+    }
+
 }

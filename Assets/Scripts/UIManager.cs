@@ -52,7 +52,7 @@ public class UIManager : MonoBehaviour {
 
     void ShowMessege(string msg)
     {
-        if (String.IsNullOrEmpty(msg)) return;
+       //if (String.IsNullOrEmpty(msg)) return;
 
         msgTxt.transform.parent.gameObject.SetActive(true);
         msgTxt.text = msg;
