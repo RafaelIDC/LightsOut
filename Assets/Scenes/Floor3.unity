@@ -887,6 +887,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e33d72dc23fa4c44fac806218f452d14, type: 2}
+    - target: {fileID: 100018, guid: e87ff8037e38646bb98a7b5857ed0269, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e87ff8037e38646bb98a7b5857ed0269, type: 3}
   m_IsPrefabAsset: 0
@@ -1011,6 +1015,31 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.164
       objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 1.0611882
+      objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.09395952
+      objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 4.8902514e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0.030593779
+      objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.1879188
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2, type: 2}
   m_IsPrefabAsset: 0
@@ -1099,7 +1128,7 @@ GameObject:
   - component: {fileID: 298651642}
   m_Layer: 0
   m_Name: Cylinder001
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1382,6 +1411,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e33d72dc23fa4c44fac806218f452d14, type: 2}
+    - target: {fileID: 100016, guid: 12e70ecc44c1143e68131e9c38fc8971, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12e70ecc44c1143e68131e9c38fc8971, type: 3}
   m_IsPrefabAsset: 0
@@ -1485,6 +1518,10 @@ Prefab:
     - target: {fileID: 400006, guid: 2a59c69e522c8ef4cb523720beed6d71, type: 3}
       propertyPath: m_LocalScale.z
       value: 5.314169
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2a59c69e522c8ef4cb523720beed6d71, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a59c69e522c8ef4cb523720beed6d71, type: 3}
@@ -1738,7 +1775,7 @@ GameObject:
   - component: {fileID: 472946128}
   m_Layer: 0
   m_Name: Vesa
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2600,6 +2637,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -88.026
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8844bc594d231ae4e82e894a737e555d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8844bc594d231ae4e82e894a737e555d, type: 3}
   m_IsPrefabAsset: 0
@@ -2736,7 +2777,7 @@ GameObject:
   - component: {fileID: 645298533}
   m_Layer: 0
   m_Name: Beer_Bottle001
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2861,6 +2902,10 @@ Prefab:
     - target: {fileID: 100000, guid: 8844bc594d231ae4e82e894a737e555d, type: 3}
       propertyPath: m_Name
       value: BasketBin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8844bc594d231ae4e82e894a737e555d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8844bc594d231ae4e82e894a737e555d, type: 3}
@@ -3938,6 +3983,26 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0.21700001
       objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.1206733
+      objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.06033641
+      objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1.8856236e-18
+      objectReference: {fileID: 0}
+    - target: {fileID: 65338000833686972, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2,
+        type: 2}
+      propertyPath: m_Center.z
+      value: -5.5242878e-21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ca809a4ee0fdc84e98c6ac1b0aba5c2, type: 2}
   m_IsPrefabAsset: 0
@@ -4707,6 +4772,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d1ec3128df96244da9e29ffeebd16d1e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ec3128df96244da9e29ffeebd16d1e, type: 3}
   m_IsPrefabAsset: 0
@@ -5252,7 +5321,7 @@ GameObject:
   - component: {fileID: 1379914556}
   m_Layer: 0
   m_Name: Whiskey_Bottle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5896,7 +5965,7 @@ GameObject:
   - component: {fileID: 1489578159}
   m_Layer: 0
   m_Name: Wind Chime Machine
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6716,6 +6785,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d1ec3128df96244da9e29ffeebd16d1e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ec3128df96244da9e29ffeebd16d1e, type: 3}
   m_IsPrefabAsset: 0
@@ -6947,6 +7020,10 @@ Prefab:
     - target: {fileID: 400000, guid: d1ec3128df96244da9e29ffeebd16d1e, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d1ec3128df96244da9e29ffeebd16d1e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ec3128df96244da9e29ffeebd16d1e, type: 3}
@@ -7264,7 +7341,7 @@ GameObject:
   - component: {fileID: 1855939115}
   m_Layer: 0
   m_Name: Irobot
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7887,7 +7964,7 @@ GameObject:
   - component: {fileID: 1999436901}
   m_Layer: 0
   m_Name: Special_Bottles
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
