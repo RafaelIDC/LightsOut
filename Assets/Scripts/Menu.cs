@@ -6,20 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public Text title;
-    public Text end;
+    public Text GameOverText;
+    public Text CreditsText;
+    public GameObject StartButton;
+    public GameObject CreditsButton;
+    public GameObject BackButton;
 
-    public enum MenuType
-    {
-        Start,
-        End,
-    }
-
-    public void Init(MenuType type)
-    {
-        title.gameObject.SetActive(type == MenuType.Start);
-        end.gameObject.SetActive(type == MenuType.End);
-    }
 
     public void StartGame()
     {
@@ -28,6 +20,17 @@ public class Menu : MonoBehaviour
 
     public void Credits()
     {
-       
+        StartButton.SetActive(false);
+        CreditsButton.SetActive(false);
+        CreditsText.gameObject.SetActive(true);
+        BackButton.SetActive(true);
+    }
+
+    public void GoBack()
+    {
+        BackButton.SetActive(false);
+        CreditsText.gameObject.SetActive(false);
+        StartButton.SetActive(true);
+        CreditsButton.SetActive(true);
     }
 }
