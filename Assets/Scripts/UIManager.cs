@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,13 +28,13 @@ public class UIManager : MonoBehaviour {
     }
 
 
-    public void ShowNextMessege(string msg, int timeToWait = 0) {
+    public void ShowNextMessege(string msg, float timeToWait = 0) {
         StartCoroutine(ShowNextMessegeCo(msg, timeToWait));
 	}
 	
 
 
-    IEnumerator ShowNextMessegeCo(string msg, int moreTimeToWait = 0)
+    IEnumerator ShowNextMessegeCo(string msg, float moreTimeToWait = 0)
     {
 
         HideMessege();
@@ -51,6 +52,8 @@ public class UIManager : MonoBehaviour {
 
     void ShowMessege(string msg)
     {
+        if (String.IsNullOrEmpty(msg)) return;
+
         msgTxt.transform.parent.gameObject.SetActive(true);
         msgTxt.text = msg;
         //Invoke("HideMessege", 4);

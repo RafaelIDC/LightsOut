@@ -10,6 +10,8 @@ public class RaycastHandler : MonoBehaviour {
 
     Vector3 centerOfView;
 
+    bool interacting = false;
+
     private void Start()
     {
         camera = GetComponent<Camera>();
@@ -29,6 +31,10 @@ public class RaycastHandler : MonoBehaviour {
 
      public void Interact()
     {
+        if (interacting) return;
+
+        interacting = true;
+
         RaycastHit hit;
         //Ray ray = camera.ScreenPointToRay(transform.position);
         Ray ray = camera.ViewportPointToRay(centerOfView);
@@ -42,7 +48,15 @@ public class RaycastHandler : MonoBehaviour {
             if(currentInteractiveObject)
                 currentInteractiveObject.OnMainEvent();
         }
+
+        Invoke("TurnOfInteracting", 1);
     }
 
+
+
+    void TurnOfInteracting()
+    {
+        interacting = false;
+    }
 
 }
