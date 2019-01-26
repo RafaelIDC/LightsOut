@@ -251,7 +251,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (currentDealDamage)
                 {
                     Debug.Log("Player takes Damage: " + currentDealDamage.damage);
-                    GameManager.instance.TakeDamage(currentDealDamage.damage);
+                    if(GameManager.instance != null){
+                        GameManager.instance.TakeDamage(currentDealDamage.damage);
+                    }
+
                     currentDealDamage.FadeRed();
                 }
 

@@ -65,12 +65,15 @@ public class DealDamage : MonoBehaviour {
 
     public void FadeRed()
     {
-        if (GameManager.instance.lightsOn) return;
+        if (GameManager.instance)
+        {
+            if (GameManager.instance.lightsOn) return;
 
-        if (isFading) return;
+            if (isFading) return;
 
-        isFading = true;
-        StartCoroutine(FadeRedCo());
+            isFading = true;
+            StartCoroutine(FadeRedCo());
+        }
 
     }
 
