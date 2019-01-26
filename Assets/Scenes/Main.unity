@@ -18924,7 +18924,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3d5f3c66065e46f449df6ade32cea943, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -23013,6 +23013,130 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 934519843}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &937660233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937660235}
+  - component: {fileID: 937660234}
+  m_Layer: 0
+  m_Name: switch sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &937660234
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937660233}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b722cbb33eb30bd4b86c81c056be27b8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &937660235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937660233}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1067859176}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941707329
 GameObject:
   m_ObjectHideFlags: 0
@@ -31726,7 +31850,7 @@ Prefab:
     - target: {fileID: 114317920728313120, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
       propertyPath: nextMessege.Array.data[0]
-      value: Hot diggity! you're truly familiar with your own home_5
+      value: Good thing I can navigate this lace with my eyes closed
       objectReference: {fileID: 0}
     - target: {fileID: 23709132543116170, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
@@ -31736,8 +31860,7 @@ Prefab:
     - target: {fileID: 114317920728313120, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
       propertyPath: nextMessege.Array.data[1]
-      value: Now... why don't you go watch some TV?  Your favorite show Mick & Rorty
-        is about to begin
+      value: Now... Time watch some TV,  Mick & Rorty, is about to start
       objectReference: {fileID: 0}
     - target: {fileID: 114317920728313120, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
@@ -31774,8 +31897,8 @@ Prefab:
     - target: {fileID: 114317920728313120, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
       propertyPath: nextMessege.Array.data[2]
-      value: Yes!!! but you just remembered you haven't taken a dump in 4 days, now
-        you don't want to piss off your mama would ya?
+      value: Now when I'm done with this I think it's time for me to hit the restroom,  It's
+        been 4 days since my last visit and mama nature is calling.
       objectReference: {fileID: 0}
     - target: {fileID: 4312750505736048, guid: 7fe4d325884f94ebea54f1e5b4e32976, type: 2}
       propertyPath: m_LocalScale.x
@@ -31924,6 +32047,16 @@ Prefab:
       propertyPath: damageSound
       value: 
       objectReference: {fileID: 786176735}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: lightningSound
+      value: 
+      objectReference: {fileID: 2018681011}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: lightSwitchSound
+      value: 
+      objectReference: {fileID: 937660234}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26df5be7d832542349dedb8c03818ee6, type: 2}
   m_IsPrefabAsset: 0
@@ -43167,7 +43300,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   nextMessege:
   - _3
-  - Ho snap! the power is off again... could you remember your way back to the fusebox?
+  - The power is out again... Should really call the electrician tomorrow
   eventDelay: 3
 --- !u!1001 &1762388047
 Prefab:
@@ -43673,7 +43806,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   nextMessege:
   - _3
-  - Ho the Noes!!! the power is off... could you switch it back on?
+  - Oh the power is off... Need to switch it on again.
   eventDelay: 3
 --- !u!54 &1789612948
 Rigidbody:
@@ -49213,7 +49346,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b430e0c0fcc88df489faabe1f3239020, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

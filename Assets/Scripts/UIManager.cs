@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour {
 
     private void Start()
     {
-        ShowNextMessege("Welcome home! hang your hat and feel cozy (Press E to use)");
+        ShowNextMessege("Home sweet home, Time to hang my hat and get cozy (Press E to use)");
     }
 
 
