@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Menu : MonoBehaviour
 {
@@ -21,7 +23,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        GameManager.instance.StartGame();
+        SceneManager.LoadScene("Main");
     }
 
     public void Credits()
