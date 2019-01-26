@@ -32467,17 +32467,17 @@ Prefab:
     - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
         type: 2}
       propertyPath: lightningColor.r
-      value: 0.8773585
+      value: 0.5754717
       objectReference: {fileID: 0}
     - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
         type: 2}
       propertyPath: lightningColor.g
-      value: 0.8773585
+      value: 0.5754717
       objectReference: {fileID: 0}
     - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
         type: 2}
       propertyPath: lightningColor.b
-      value: 0.8773585
+      value: 0.5754717
       objectReference: {fileID: 0}
     - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
         type: 2}
