@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: e51b82197071c4a2b85cfb46295ee0f1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Base
+    100002: Base Grid
+    100004: Camera
+    100006: Chain
+    100008: ChainBase
+    100010: Chime Top
+    100012: Chimer Mechanic
+    100014: Chimer String Bottom
+    100016: Chimer String Top
+    100018: Chimer Torus
+    100020: Chimes
+    100022: Cylinder.001
+    100024: Half Chain
+    100026: Lamp
+    100028: Support
+    100030: Top
+    100032: //RootNode
+    400000: Base
+    400002: Base Grid
+    400004: Camera
+    400006: Chain
+    400008: ChainBase
+    400010: Chime Top
+    400012: Chimer Mechanic
+    400014: Chimer String Bottom
+    400016: Chimer String Top
+    400018: Chimer Torus
+    400020: Chimes
+    400022: Cylinder.001
+    400024: Half Chain
+    400026: Lamp
+    400028: Support
+    400030: Top
+    400032: //RootNode
+    2000000: Camera
+    2100000: 'Material #31'
+    2100002: 'Material #29'
+    2100004: 'Material #32'
+    2100006: Metal
+    2100008: No Name
+    2100010: 'Material #33'
+    2100012: Dark Wood
+    2100014: 'Material #30'
+    2300000: Base
+    2300002: Base Grid
+    2300004: Chain
+    2300006: ChainBase
+    2300008: Chime Top
+    2300010: Chimer Mechanic
+    2300012: Chimer String Bottom
+    2300014: Chimer String Top
+    2300016: Chimer Torus
+    2300018: Chimes
+    2300020: Cylinder.001
+    2300022: Half Chain
+    2300024: Support
+    2300026: Top
+    3300000: Base
+    3300002: Base Grid
+    3300004: Chain
+    3300006: ChainBase
+    3300008: Chime Top
+    3300010: Chimer Mechanic
+    3300012: Chimer String Bottom
+    3300014: Chimer String Top
+    3300016: Chimer Torus
+    3300018: Chimes
+    3300020: Cylinder.001
+    3300022: Half Chain
+    3300024: Support
+    3300026: Top
+    4300000: Cylinder.001
+    4300002: Chimer Mechanic
+    4300004: Chimer String Bottom
+    4300006: Chimer Torus
+    4300008: Chimer String Top
+    4300010: Chimes
+    4300012: Chime Top
+    4300014: Half Chain
+    4300016: ChainBase
+    4300018: Chain
+    4300020: Base Grid
+    4300022: Top
+    4300024: Support
+    4300026: Base
+    7400000: Take 001
+    9500000: //RootNode
+    10800000: Lamp
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
