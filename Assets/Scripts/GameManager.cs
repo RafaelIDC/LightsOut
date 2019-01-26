@@ -9,9 +9,11 @@ public class GameManager : MonoBehaviour {
     public int health = 100;
     static public GameManager instance;
 
-    public Light[] lights;
+    Light[] lights;
+    public Light[] lightninglights;
 
     Color globalLightColor;
+    public Color lightningColor;
 
     public Transform obstaclesParent;
 
@@ -168,25 +170,60 @@ public class GameManager : MonoBehaviour {
         if (lightsOn) yield break;
 
 
-        LightsOn();
+        foreach (DealDamage obs in obstacles)
+        {
+            obs.ShowObj();
+        }
+        foreach (Light mlight in lightninglights)
+        {
+            mlight.enabled = true;
+        }
+        RenderSettings.ambientLight = globalLightColor;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
         yield return new WaitForSeconds(randomTime);
 
-        LightsOff();
+
+        foreach (DealDamage obs in obstacles)
+        {
+            obs.HideObj();
+        }
+        foreach (Light mlight in lightninglights)
+        {
+            mlight.enabled = false;
+        }
+        RenderSettings.ambientLight = Color.black;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
         yield return new WaitForSeconds(randomTime);
 
-        LightsOn();
+
+        foreach (DealDamage obs in obstacles)
+        {
+            obs.ShowObj();
+        }
+        foreach (Light mlight in lightninglights)
+        {
+            mlight.enabled = true;
+        }
+        RenderSettings.ambientLight = globalLightColor;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
         yield return new WaitForSeconds(randomTime);
 
-        LightsOff();
+
+        foreach (DealDamage obs in obstacles)
+        {
+            obs.HideObj();
+        }
+        foreach (Light mlight in lightninglights)
+        {
+            mlight.enabled = false;
+        }
+        RenderSettings.ambientLight = Color.black;
 
 
         lightningCo = WaitForLightning();
