@@ -135,21 +135,32 @@ public class GameManager : MonoBehaviour {
     }
 
 
-    public void TurnLightsDown(bool isLightning = true)
+
+    public void WaitAndLightsDown(int waitTime = 0)
     {
+        Debug.Log("WaitAndLightsDow , waitTime= " + waitTime);
+        Invoke("TurnLightsDown", (float)waitTime);
+    }
+
+    public void TurnLightsDown()
+    {
+        Debug.Log("TurnLightsDown()");
+
         LightsOff();
 
         lightsOn = false;
 
-        if (isLightning)
+        if (lightningCo != null)
         {
-            if (lightningCo != null)
-            {
-                StopCoroutine(lightningCo);
-            }
-            lightningCo = WaitForLightning();
-            StartCoroutine(lightningCo);
+            StopCoroutine(lightningCo);
         }
+        lightningCo = WaitForLightning();
+        StartCoroutine(lightningCo);
+
+        //if (isLightning)
+        //{
+
+        //}
 
     }
 
