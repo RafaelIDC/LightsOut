@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     public Light[] lights;
 
-    public Color globalLightColor;
+    Color globalLightColor;
 
     public Transform obstaclesParent;
 
@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour {
 
         lights = FindObjectsOfType<Light>();
         obstacles = FindObjectsOfType<DealDamage>();
+
+        globalLightColor = RenderSettings.ambientLight;
     }
 
 
