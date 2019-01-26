@@ -10,7 +10,7 @@ public class InteractiveObject : MonoBehaviour {
     public UnityEvent MainEvent;
     public UnityEvent DelayedEvent;
     public string[] nextMessege;
-    public float textDelay;
+    public float eventDelay;
     int msgIndex = 0;
     string currentMsg;
     float nextMsgDelay;
@@ -58,11 +58,13 @@ public class InteractiveObject : MonoBehaviour {
             currentMsg = nextMessege[msgIndex];
             UIManager.instance.ShowNextMessege(currentMsg, nextMsgDelay);
             nextMsgDelay = 0;
+
+            msgIndex++;
         }
 
-        if (textDelay > 0)
+        if (eventDelay > 0)
         {
-            Invoke("OnDelayedEvent", textDelay);
+            Invoke("OnDelayedEvent", eventDelay);
         }
     }
 

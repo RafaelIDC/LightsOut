@@ -3899,6 +3899,11 @@ Prefab:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 23909946499660488, guid: d2fad9e421532ae40ac79ecc3fe0a586,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2fad9e421532ae40ac79ecc3fe0a586, type: 2}
   m_IsPrefabAsset: 0
@@ -6693,7 +6698,7 @@ MonoBehaviour:
   nextMessege:
   - _3
   - Ho the Noes!!! the power is off... could you switch it back on?
-  textDelay: 3
+  eventDelay: 3
 --- !u!65 &581052764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6716,7 +6721,7 @@ Prefab:
     - target: {fileID: 114317920728313120, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
       propertyPath: nextMessege.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114317920728313120, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
@@ -6841,6 +6846,12 @@ Prefab:
       propertyPath: myMessegeItems.Array.data[0].nextMessege.Array.data[1]
       value: Now... why don't you go watch some TV?  Your favorite show Mick & Rorty
         is about to begin
+      objectReference: {fileID: 0}
+    - target: {fileID: 114317920728313120, guid: 7fe4d325884f94ebea54f1e5b4e32976,
+        type: 2}
+      propertyPath: nextMessege.Array.data[2]
+      value: Yes!!! but you just remembered you haven't taken a dump in 4 days, now
+        you don't want to piss off your mama would ya?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fe4d325884f94ebea54f1e5b4e32976, type: 2}
@@ -10815,6 +10826,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4316736044567300, guid: 9ebbea34a405bcb408d6505220f5977d,
     type: 2}
   m_PrefabInternal: {fileID: 853676110}
+--- !u!1 &1001450838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1062206808933956, guid: d2fad9e421532ae40ac79ecc3fe0a586,
+    type: 2}
+  m_PrefabInternal: {fileID: 307355900}
+--- !u!114 &1001450839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001450838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd0c256212d949d390b9f94a45b291e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1693779005}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DelayedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1693779005}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 781931473}
+        m_MethodName: TurnLightsDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  nextMessege:
+  - _3
+  - Ho snap! the power is off again... could you remember your way back to the fusebox?
+  eventDelay: 3
 --- !u!1 &1015447244 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1095687176903596, guid: 71109ad704809234eab5c831a49fcc0c,
@@ -16678,6 +16752,93 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ebbea34a405bcb408d6505220f5977d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1693779005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693779006}
+  - component: {fileID: 1693779009}
+  - component: {fileID: 1693779008}
+  - component: {fileID: 1693779007}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1693779006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693779005}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.581, y: 0.0367, z: -0.005}
+  m_LocalScale: {x: 0.93990993, y: 0.83134997, z: 1}
+  m_Children: []
+  m_Father: {fileID: 636562738}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!64 &1693779007
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693779005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1693779008
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693779005}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: c507e08c620b640aebb377575e7c6051, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1693779009
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693779005}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1718406577
 GameObject:
   m_ObjectHideFlags: 0
