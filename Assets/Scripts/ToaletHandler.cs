@@ -52,7 +52,7 @@ public class ToaletHandler : MonoBehaviour {
             lerpIndex += lerpStep;
             yield return waitFixedUpdate;
         }
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(3);
 
         firstPersonControllerf.isLocked = false;
 
