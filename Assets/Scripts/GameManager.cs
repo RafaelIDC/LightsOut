@@ -245,7 +245,7 @@ public class GameManager : MonoBehaviour {
         {
             mlight.enabled = true;
         }
-        RenderSettings.ambientLight = lightningColor;
+        RenderSettings.ambientLight = Color.gray;
 
 
         randomTime = Random.Range(0.05f, 0.5f);
