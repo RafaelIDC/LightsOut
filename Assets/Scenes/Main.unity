@@ -852,6 +852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &27869003
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1230,6 +1231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &32457076
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1334,6 +1336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!4 &42290434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4669194108395160, guid: b0df1091a4b28474aa5945522e12ba03,
@@ -1415,6 +1418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   renderers: []
+  materials: []
 --- !u!23 &42710650
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2576,6 +2580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   renderers: []
+  materials: []
 --- !u!65 &99350848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3339,6 +3344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &130142080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4423,6 +4429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &154338098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4545,6 +4552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1001 &157423533
 Prefab:
   m_ObjectHideFlags: 0
@@ -5115,6 +5123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   renderers: []
+  materials: []
 --- !u!54 &182771123
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5714,6 +5723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   renderers: []
+  materials: []
 --- !u!65 &203359758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10011,6 +10021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!65 &377162360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10605,6 +10616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!114 &406525366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10618,6 +10630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   renderers: []
+  materials: []
 --- !u!1 &408381201
 GameObject:
   m_ObjectHideFlags: 0
@@ -10667,6 +10680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &408381204
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11209,6 +11223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &421600350
 GameObject:
   m_ObjectHideFlags: 0
@@ -11389,6 +11404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!65 &428953668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13709,6 +13725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   renderers: []
+  materials: []
 --- !u!65 &522506579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13820,8 +13837,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.3, z: 0.3}
-  m_Center: {x: 0, y: 0, z: 0.06}
+  m_Size: {x: 0.3732222, y: 0.36565042, z: 0.3}
+  m_Center: {x: 0.036611002, y: -0.03282525, z: 0.06000001}
 --- !u!1 &527029336
 GameObject:
   m_ObjectHideFlags: 0
@@ -13872,6 +13889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!65 &527029339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14126,6 +14144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!1001 &542948727
 Prefab:
   m_ObjectHideFlags: 0
@@ -14761,6 +14780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1001 &573022716
 Prefab:
   m_ObjectHideFlags: 0
@@ -15882,6 +15902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!65 &621646737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16236,6 +16257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 8
   renderers: []
+  materials: []
 --- !u!4 &660623962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4090187372852596, guid: 8c895a406b63aca45acdc9e325737ee7,
@@ -17759,6 +17781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!54 &706021760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18112,6 +18135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &718092538
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19193,6 +19217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!4 &763257584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4669194108395160, guid: b0df1091a4b28474aa5945522e12ba03,
@@ -19483,6 +19508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!65 &780914345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20631,6 +20657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &816255256
 GameObject:
   m_ObjectHideFlags: 0
@@ -21240,6 +21267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1001 &837054823
 Prefab:
   m_ObjectHideFlags: 0
@@ -22521,6 +22549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &901094908
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23011,6 +23040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 8
   renderers: []
+  materials: []
 --- !u!1 &918386341
 GameObject:
   m_ObjectHideFlags: 0
@@ -23112,6 +23142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &918386347
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24156,6 +24187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &952328718
 GameObject:
   m_ObjectHideFlags: 0
@@ -24426,6 +24458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1001 &974500720
 Prefab:
   m_ObjectHideFlags: 0
@@ -25263,6 +25296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &1001450838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1062206808933956, guid: d2fad9e421532ae40ac79ecc3fe0a586,
@@ -26302,6 +26336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &1051331573
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26409,6 +26444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &1060429613
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27153,6 +27189,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1090303835}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1090741343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090741344}
+  m_Layer: 0
+  m_Name: dumpHeadTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1090741344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090741343}
+  m_LocalRotation: {x: 0.038388696, y: 0, z: 0, w: 0.99926287}
+  m_LocalPosition: {x: -0.028232116, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1441631714}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092232694
 GameObject:
   m_ObjectHideFlags: 0
@@ -27942,6 +28006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   renderers: []
+  materials: []
 --- !u!65 &1135269009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29447,7 +29512,7 @@ Prefab:
     - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
       propertyPath: m_WalkSpeed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
@@ -29457,7 +29522,7 @@ Prefab:
     - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
       propertyPath: m_JumpSpeed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_Mass
@@ -29477,6 +29542,41 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_IsWalking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_FovKick.Camera
+      value: 
+      objectReference: {fileID: 2044849745}
+    - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_FovKick.originalFov
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_HeadBob.HorizontalBobRange
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_HeadBob.VerticalBobRange
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+    - target: {fileID: 114688045278493852, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
     m_RemovedComponents:
     - {fileID: 114172790155495176, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
     - {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -29835,6 +29935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!136 &1210338908
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31050,6 +31151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 8
   renderers: []
+  materials: []
 --- !u!1001 &1246847458
 Prefab:
   m_ObjectHideFlags: 0
@@ -31249,6 +31351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &1254890166
 GameObject:
   m_ObjectHideFlags: 0
@@ -31534,6 +31637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   renderers: []
+  materials: []
 --- !u!65 &1258336133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31693,6 +31797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   renderers: []
+  materials: []
 --- !u!65 &1261812864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32179,6 +32284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1001 &1276092884
 Prefab:
   m_ObjectHideFlags: 0
@@ -32268,6 +32374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!65 &1276092888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32944,17 +33051,17 @@ Prefab:
     - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
         type: 2}
       propertyPath: lightningColor.r
-      value: 0.5754717
+      value: 0.4528302
       objectReference: {fileID: 0}
     - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
         type: 2}
       propertyPath: lightningColor.g
-      value: 0.5754717
+      value: 0.4528302
       objectReference: {fileID: 0}
     - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
         type: 2}
       propertyPath: lightningColor.b
-      value: 0.5754717
+      value: 0.4528302
       objectReference: {fileID: 0}
     - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
         type: 2}
@@ -33021,6 +33128,11 @@ Prefab:
       propertyPath: darkMusic
       value: 
       objectReference: {fileID: 210034196}
+    - target: {fileID: 114616284956390636, guid: 26df5be7d832542349dedb8c03818ee6,
+        type: 2}
+      propertyPath: redMat
+      value: 
+      objectReference: {fileID: 2100000, guid: f46a467a54b33474d9d5dfeafb4f298a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26df5be7d832542349dedb8c03818ee6, type: 2}
   m_IsPrefabAsset: 0
@@ -35174,6 +35286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &1379567783
 GameObject:
   m_ObjectHideFlags: 0
@@ -35450,6 +35563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   renderers: []
+  materials: []
 --- !u!1 &1386839913
 GameObject:
   m_ObjectHideFlags: 0
@@ -35856,6 +35970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 8
   renderers: []
+  materials: []
 --- !u!1 &1403619737
 GameObject:
   m_ObjectHideFlags: 0
@@ -35905,6 +36020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 7
   renderers: []
+  materials: []
 --- !u!54 &1403619740
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36865,6 +36981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!65 &1441631717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36892,7 +37009,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1441631719}
-        m_MethodName: ToaletEvent
+        m_MethodName: ToiletEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36922,13 +37039,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0459fffdda04779aed19c3e6c8c007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toaletPaper: {fileID: 70833903}
-  toaletMsg: There's no toilet paper! I should grab some.
+  toiletPaper: {fileID: 70833903}
+  toiletMsg: There's no toilet paper! I should grab some.
   lightsMsg: Man... this Is just not my day, is it? And the fuse box  is all the way
     down stairs...
   firstPersonControllerf: {fileID: 1197409312}
   playerTransform: {fileID: 8061095}
-  playerToaletPosition: {fileID: 2066715861}
+  playerHeadTransform: {fileID: 2044849742}
+  playerToiletTrnsfrm: {fileID: 2066715861}
+  playerHeadToiletTrnsfrm: {fileID: 1090741344}
 --- !u!1001 &1449881116
 Prefab:
   m_ObjectHideFlags: 0
@@ -38461,6 +38580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!54 &1508539956
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40563,6 +40683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!65 &1600641199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41557,6 +41678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   renderers: []
+  materials: []
 --- !u!65 &1641619239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41694,6 +41816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &1647435637
 GameObject:
   m_ObjectHideFlags: 0
@@ -42712,6 +42835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!65 &1691424636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44139,6 +44263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &1760112945
 GameObject:
   m_ObjectHideFlags: 0
@@ -45617,6 +45742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   renderers: []
+  materials: []
 --- !u!54 &1822780553
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48395,6 +48521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   renderers: []
+  materials: []
 --- !u!54 &1928900177
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48893,6 +49020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!136 &1951998977
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -49076,6 +49204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   renderers: []
+  materials: []
 --- !u!65 &1953919207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50035,6 +50164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1001 &1992509808
 Prefab:
   m_ObjectHideFlags: 0
@@ -50891,6 +51021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   renderers: []
+  materials: []
 --- !u!65 &2026573753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51214,6 +51345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &2044284451
 GameObject:
   m_ObjectHideFlags: 0
@@ -51299,6 +51431,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2044284451}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2044849742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1197409311}
+--- !u!20 &2044849745 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1197409311}
 --- !u!4 &2045721994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4316736044567300, guid: 9ebbea34a405bcb408d6505220f5977d,
@@ -51950,6 +52092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   renderers: []
+  materials: []
 --- !u!1 &2066715860
 GameObject:
   m_ObjectHideFlags: 0
@@ -52063,6 +52206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &2071926793
 GameObject:
   m_ObjectHideFlags: 0
@@ -52110,6 +52254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!114 &2071926796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52123,6 +52268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   renderers: []
+  materials: []
 --- !u!4 &2074763216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4669194108395160, guid: b0df1091a4b28474aa5945522e12ba03,
@@ -52596,6 +52742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 7
   renderers: []
+  materials: []
 --- !u!54 &2104318103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52951,6 +53098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   renderers: []
+  materials: []
 --- !u!1 &2122252690
 GameObject:
   m_ObjectHideFlags: 0

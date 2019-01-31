@@ -8,7 +8,8 @@ public class DealDamage : MonoBehaviour {
     public int damage = 5;
 
     public Renderer[] renderers;
-
+    public List<Material> materials = new List<Material>();
+    Material redMat;
     WaitForFixedUpdate waitFixedUpdate = new WaitForFixedUpdate();
 
     float fadeSpeed = 0.01f;
@@ -19,26 +20,25 @@ public class DealDamage : MonoBehaviour {
     bool isFading;
 
 
-   //Shader standardShader;
-
-    //Material fadeMat;
-    //Material defoultMat;
-
 
 
     void Start () {
         renderers = GetComponentsInChildren<Renderer>();
-
-        foreach (Renderer rend in renderers)
+        redMat = GameManager.instance.redMat;
+        //foreach (Renderer rend in renderers)
+        //{
+        //    rend.sharedMaterial.shader = Shader.Find("Standard");
+        //    ToRegularMat(rend.material);
+        //}
+        for(int i = 0; i< renderers.Length; i++)
         {
-            rend.sharedMaterial.shader = Shader.Find("Standard");
-            ToRegularMat(rend.material);
+            Material newMat = renderers[i].material;
+            materials.Add(newMat);
         }
-
+        
         //fadeShader = Shader.Find("Legacy Shaders/Transparent/VertexLit");
         //standardShader = renderers[0].material.shader;
-
-
+        
     }
 
 
@@ -80,13 +80,12 @@ public class DealDamage : MonoBehaviour {
 
     IEnumerator FadeRedCo()
     {
-
-        ShowObj();
         foreach (Renderer rend in renderers)
         {
-            ToFadeMat(rend.material);
+            //ToFadeMat(rend.material);
+            rend.material = redMat;
         }
-
+        ShowObj();
         fadeVal = 1;
         while (fadeVal > 0)
         {
@@ -97,45 +96,48 @@ public class DealDamage : MonoBehaviour {
                 fadeColor.a = fadeVal;
                 rend.material.color = fadeColor;
             }
-
             yield return waitFixedUpdate;
         }
 
-        HideObj();
-        foreach (Renderer rend in renderers)
+        //HideObj();
+        //foreach (Renderer rend in renderers)
+        //{
+        //    ToRegularMat(rend.material);
+        //    //fadeColor = rend.material.color;
+        //    fadeColor.a = 1f;
+        //    rend.material.color = fadeColor;
+        //}
+        for (int i = 0; i < renderers.Length; i++)
         {
-            ToRegularMat(rend.material);
-            //fadeColor = rend.material.color;
-            fadeColor.a = 1f;
-            rend.material.color = fadeColor;
+            renderers[i].material = materials[i];
         }
         isFading = false;
     }
 
 
-    void ToFadeMat(Material mat)
-    {
-        mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-        mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-        mat.SetInt("_ZWrite", 0);
-        mat.DisableKeyword("_ALPHATEST_ON");
-        mat.EnableKeyword("_ALPHABLEND_ON");
-        mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-        mat.renderQueue = 3000;
-        mat.EnableKeyword("_EMISSION");
-        mat.SetColor("_EmissionColor", Color.red);
-    }
+    //void ToFadeMat(Material mat)
+    //{
+    //    mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+    //    mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+    //    mat.SetInt("_ZWrite", 0);
+    //    mat.DisableKeyword("_ALPHATEST_ON");
+    //    mat.EnableKeyword("_ALPHABLEND_ON");
+    //    mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+    //    mat.renderQueue = 3000;
+    //    mat.EnableKeyword("_EMISSION");
+    //    mat.SetColor("_EmissionColor", Color.red);
+    //}
 
-    void ToRegularMat(Material mat)
-    {
-        mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
-        mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
-        mat.SetInt("_ZWrite", 1);
-        mat.DisableKeyword("_ALPHATEST_ON");
-        mat.DisableKeyword("_ALPHABLEND_ON");
-        mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-        mat.renderQueue = -1;
-        mat.DisableKeyword("_EMISSION");
-    }
+    //void ToRegularMat(Material mat)
+    //{
+    //    mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+    //    mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
+    //    mat.SetInt("_ZWrite", 1);
+    //    mat.DisableKeyword("_ALPHATEST_ON");
+    //    mat.DisableKeyword("_ALPHABLEND_ON");
+    //    mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+    //    mat.renderQueue = -1;
+    //    mat.DisableKeyword("_EMISSION");
+    //}
 
 }

@@ -30,7 +30,8 @@ public class InteractiveObject : MonoBehaviour {
         Debug.Log("Interact with object! " + gameObject.name);
         MainEvent.Invoke();
 
-        if (UIManager.instance && nextMessege.Length > msgIndex && !String.IsNullOrEmpty(nextMessege[msgIndex]))
+        //if (UIManager.instance && nextMessege.Length > msgIndex && !String.IsNullOrEmpty(nextMessege[msgIndex]))
+        if (UIManager.instance && nextMessege.Length > msgIndex)
         {
             if (nextMessege[msgIndex].Contains("_"))
             {
@@ -45,11 +46,11 @@ public class InteractiveObject : MonoBehaviour {
                 currentMsg = nextMessege[msgIndex];
             }
             //UIManager.instance.ShowNextMessege(currentMsg);
-            if (!String.IsNullOrEmpty(currentMsg))
-            {
-                UIManager.instance.ShowNextMessege(currentMsg);
-            }
-
+            //if (!String.IsNullOrEmpty(currentMsg))
+            //{
+            //    UIManager.instance.ShowNextMessege(currentMsg);
+            //}
+            UIManager.instance.ShowNextMessege(currentMsg);
         }
 
         msgIndex++;

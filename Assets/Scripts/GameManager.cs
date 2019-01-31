@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public int health = 100;
-    static public GameManager instance;
+    static public GameManager instance = null;
 
     Light[] lights;
     //public Light[] lightninglights;
@@ -17,9 +17,7 @@ public class GameManager : MonoBehaviour {
     Color globalLightColor;
     public Color lightningColor;
 
-    //public Transform floor1ObstaclesParent;
-    //public Transform floor2ObstaclesParent;
-    //public Transform floor3ObstaclesParent;
+    public Material redMat;
 
     public DealDamage[] obstacles;
     //public List<DealDamage> obstacles = new List<DealDamage>();
@@ -58,7 +56,12 @@ public class GameManager : MonoBehaviour {
 
     void Awake()
     {
-        instance = this;
+        if (instance == null)
+            instance = this;
+
+        else if (instance != this)
+            Destroy(gameObject);
+
 
         floor1.SetActive(true);
         floor2.SetActive(true);
@@ -127,7 +130,9 @@ public class GameManager : MonoBehaviour {
 
         if (health > 0)
         {
+            Debug.Log("Player takes Damage: " + amount);
             this.health -= amount;
+            damageSound.Play();
             if (health <= 0)
             {
                 health = 0;
@@ -142,10 +147,10 @@ public class GameManager : MonoBehaviour {
                 healthTxt.text = health.ToString();
             }
 
-            if(amount > 0)
-            {
-                damageSound.Play();
-            }
+            //if(amount > 0)
+            //{
+            //    damageSound.Play();
+            //}
 
         }
         else
@@ -245,8 +250,8 @@ public class GameManager : MonoBehaviour {
         {
             mlight.enabled = true;
         }
-        RenderSettings.ambientLight = Color.gray;
-
+        //RenderSettings.ambientLight = Color.gray;
+        RenderSettings.ambientLight = lightningColor;
 
         randomTime = Random.Range(0.05f, 0.5f);
         yield return new WaitForSeconds(randomTime);
