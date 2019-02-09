@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class RaycastHandler : MonoBehaviour {
 
-    Camera camera;
+    public List<GameObject> interactiveObjects;
 
-    InteractiveObject currentInteractiveObject;
+    int nextObjectToInteractWith;
+
+    Camera camera;
 
     Vector3 centerOfView;
 
@@ -16,6 +18,7 @@ public class RaycastHandler : MonoBehaviour {
     {
         camera = GetComponent<Camera>();
         centerOfView = new Vector3(0.5F, 0.5F, 0);
+        nextObjectToInteractWith = 0;
     }
 
 
@@ -43,10 +46,14 @@ public class RaycastHandler : MonoBehaviour {
         if (Physics.Raycast(ray, out hit, 4f))
         {
             Debug.Log("Raycast Hit! " + hit.transform.name);
-            currentInteractiveObject = hit.transform.GetComponent<InteractiveObject>();
 
-            if(currentInteractiveObject)
+            bool hasNextInteractiveObject = (interactiveObjects != null && nextObjectToInteractWith >= 0 && nextObjectToInteractWith < interactiveObjects.Count);
+
+            if (hasNextInteractiveObject && interactiveObjects[nextObjectToInteractWith] == hit.transform.gameObject) {
+                nextObjectToInteractWith++;
+                InteractiveObject currentInteractiveObject = hit.transform.GetComponent<InteractiveObject>();
                 currentInteractiveObject.OnMainEvent();
+            }
         }
 
         Invoke("TurnOfInteracting", 1);
