@@ -12,11 +12,13 @@ public class Menu : MonoBehaviour
     public GameObject CreditsButton;
     public GameObject BackButton;
     public GameObject Logo;
-
+    public AudioSource titleMusic;
 
 
     private void Start()
     {
+        titleMusic.Play();
+
         if (CrossSceneMenuHandler.CreditsOn)
         {
             Credits();
@@ -29,6 +31,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
+        titleMusic.Stop();
         CrossSceneMenuHandler.CreditsOn = false;
         SceneManager.LoadScene("Main");
     }
