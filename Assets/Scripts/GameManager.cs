@@ -347,7 +347,7 @@ public class GameManager : MonoBehaviour {
     public void OnFinishGame()
     {
         Debug.Log("Game Finished!");
-        CrossSceneMenuHandler.instance.creditsOn = true;
+        CrossSceneMenuHandler.CreditsOn = true;
         SceneManager.LoadScene(0);
     }
 

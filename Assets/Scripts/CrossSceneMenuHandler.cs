@@ -2,27 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrossSceneMenuHandler : MonoBehaviour {
+public static class CrossSceneMenuHandler {
 
+    private static bool creditsOn;
 
-    public static CrossSceneMenuHandler instance;
-
-    public bool creditsOn;
-
-
-
-	void Awake () {
-        if(instance == null)
-        {
-            instance = this;
+    public static bool CreditsOn {
+        get {
+            return creditsOn;
         }
-        else if(instance != this)
-        {
-            Destroy(gameObject);
+        set {
+            creditsOn = value;
         }
-
-        DontDestroyOnLoad(this);
-	}
-	
-	
+    }
 }

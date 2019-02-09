@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        if (CrossSceneMenuHandler.instance.creditsOn)
+        if (CrossSceneMenuHandler.CreditsOn)
         {
             Credits();
         }
@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        CrossSceneMenuHandler.instance.creditsOn = false;
+        CrossSceneMenuHandler.CreditsOn = false;
         SceneManager.LoadScene("Main");
     }
 
@@ -49,6 +49,6 @@ public class Menu : MonoBehaviour
         Logo.SetActive(true);
         StartButton.SetActive(true);
         CreditsButton.SetActive(true);
-        CrossSceneMenuHandler.instance.creditsOn = false;
+        CrossSceneMenuHandler.CreditsOn = false;
     }
 }
