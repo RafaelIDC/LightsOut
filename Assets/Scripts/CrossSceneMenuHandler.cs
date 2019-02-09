@@ -12,6 +12,11 @@ public static class CrossSceneMenuHandler {
         }
         set {
             creditsOn = value;
+
+            if (creditsOn) {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
         }
     }
 }
