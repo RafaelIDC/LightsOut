@@ -19861,17 +19861,17 @@ Prefab:
     - target: {fileID: 65415816947901912, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
       propertyPath: m_Size.x
-      value: 0.4273379
+      value: 1.1388307
       objectReference: {fileID: 0}
     - target: {fileID: 65415816947901912, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
       propertyPath: m_Size.z
-      value: 0.21702383
+      value: 1.2995907
       objectReference: {fileID: 0}
     - target: {fileID: 65415816947901912, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
       propertyPath: m_Center.z
-      value: -0.38518688
+      value: 0.15609653
       objectReference: {fileID: 0}
     - target: {fileID: 114317920728313120, guid: 7fe4d325884f94ebea54f1e5b4e32976,
         type: 2}
@@ -19884,6 +19884,26 @@ Prefab:
       propertyPath: nextMessege.Array.data[4]
       value: Thank you for playing! You really know your way around here - just like
         home. Time to go to bed - good night!
+      objectReference: {fileID: 0}
+    - target: {fileID: 65415816947901912, guid: 7fe4d325884f94ebea54f1e5b4e32976,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65415816947901912, guid: 7fe4d325884f94ebea54f1e5b4e32976,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.533949
+      objectReference: {fileID: 0}
+    - target: {fileID: 65415816947901912, guid: 7fe4d325884f94ebea54f1e5b4e32976,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.0110147
+      objectReference: {fileID: 0}
+    - target: {fileID: 65415816947901912, guid: 7fe4d325884f94ebea54f1e5b4e32976,
+        type: 2}
+      propertyPath: m_Center.y
+      value: -0.18648136
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fe4d325884f94ebea54f1e5b4e32976, type: 2}
