@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    public int health = 100;
+    
     static public GameManager instance = null;
-
+    public int health = 100;
     Light[] lights;
     //public Light[] lightninglights;
     List<Light> lightningLights = new List<Light>();
@@ -52,6 +52,10 @@ public class GameManager : MonoBehaviour {
     public AudioSource darkMusic;
 
 
+    public bool isTestMode;
+    public GameObject testModeIndication;
+
+
 
 
     void Awake()
@@ -93,6 +97,15 @@ public class GameManager : MonoBehaviour {
         floor2.SetActive(false);
 
         lightMusic.Play();
+
+        if (isTestMode)
+        {
+            testModeIndication.SetActive(true);
+        }
+        else
+        {
+            testModeIndication.SetActive(false);
+        }
     }
 
 
@@ -115,7 +128,24 @@ public class GameManager : MonoBehaviour {
             {
                 TurnLightsDown();
             }
+        }
 
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        if (Input.GetKeyUp(KeyCode.T))
+        {
+            isTestMode = !isTestMode;
+            if (isTestMode)
+            {
+                testModeIndication.SetActive(true);
+            }
+            else
+            {
+                testModeIndication.SetActive(false);
+            }
         }
     }
 
@@ -172,6 +202,8 @@ public class GameManager : MonoBehaviour {
 
     public void LoseGame()
     {
+        if (isTestMode) return;
+
         Invoke("StartGame", 1);
     }
 
@@ -214,12 +246,32 @@ public class GameManager : MonoBehaviour {
 
     public void TurnLightsOn()
     {
-        if (lightningsOn) return;
-
-        LightsOn();
-
         lightsOn = true;
 
+        if (lightningsOn)
+        {
+            if (lightningCo == null)
+            {
+                lightningCo = WaitForLightning();
+            }
+           
+            StopCoroutine(lightningCo);
+
+            foreach (DealDamage obs in obstacles)
+            {
+                obs.HideObj();
+            }
+            foreach (Light mlight in lightningLights)
+            {
+                mlight.enabled = false;
+            }
+            RenderSettings.ambientLight = Color.black;
+
+            lightningsOn = false;
+        }
+
+        LightsOn();
+        
         lightSwitchSound.Play();
 
         lightMusic.Play();
@@ -250,7 +302,6 @@ public class GameManager : MonoBehaviour {
         {
             mlight.enabled = true;
         }
-        //RenderSettings.ambientLight = Color.gray;
         RenderSettings.ambientLight = lightningColor;
 
         randomTime = Random.Range(0.05f, 0.5f);
@@ -309,9 +360,7 @@ public class GameManager : MonoBehaviour {
     {
         foreach (Light mlight in homeLights)
         {
-
             mlight.enabled = true;
-
         }
         RenderSettings.ambientLight = globalLightColor;
 

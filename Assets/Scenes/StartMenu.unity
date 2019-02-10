@@ -230,7 +230,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Created during GGJ2019 by\n\nTamir (Monetize) Tarom\r\nRafael (OldSchool)
-    Ben-Ari\r\nElad (AlmostFridge) Flaishon \r\nYoni (TeddyBear) Elbaz\r\nAlon (PlaceHolder)
+    Ben-Ari\r\nElad (AlmostFridge) Flaishon \r\nYoni (TeddyBear) Elbaz\r\nAlon (GetComponent)
     Dorn\r\n\n\nSounds\r\n\r\nTom (SoundBlaster) Zylbersztein\r"
 --- !u!222 &144721648
 CanvasRenderer:

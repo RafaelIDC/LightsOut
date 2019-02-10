@@ -250,13 +250,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-
+        bool sameObstacle;
+        int currentObstacle;
+        int prevObstacle;
         DealDamage currentDealDamage;
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
             if (hit.gameObject.tag == "Obstacle")
             {
+                currentObstacle = hit.gameObject.GetInstanceID();
+
+                if (currentObstacle == prevObstacle) return;
+                
                 currentDealDamage = hit.gameObject.GetComponent<DealDamage>();
                 if (currentDealDamage)
                 {
@@ -267,8 +273,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                     currentDealDamage.FadeRed();
                 }
-
             }
+
+            prevObstacle = hit.gameObject.GetInstanceID();
 
             Rigidbody body = hit.collider.attachedRigidbody;
             //dont move the rigidbody if the character is on top of it

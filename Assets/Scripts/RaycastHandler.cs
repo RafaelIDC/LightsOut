@@ -54,6 +54,11 @@ public class RaycastHandler : MonoBehaviour {
                 InteractiveObject currentInteractiveObject = hit.transform.GetComponent<InteractiveObject>();
                 currentInteractiveObject.OnMainEvent();
             }
+            else if (GameManager.instance.isTestMode)
+            {
+                InteractiveObject currentInteractiveObject = hit.transform.GetComponent<InteractiveObject>();
+                currentInteractiveObject.OnMainEvent();
+            }
         }
 
         Invoke("TurnOfInteracting", 1);

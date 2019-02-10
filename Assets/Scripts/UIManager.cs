@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour {
 
     public Text msgTxt;
 
-    WaitForSeconds waitForMessege = new WaitForSeconds(1.5f);
+    WaitForSeconds waitForMessege = new WaitForSeconds(1f);
 
 
 
